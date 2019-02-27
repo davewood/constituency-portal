@@ -1,0 +1,17 @@
+.gnupg
+config.*cfg
+*.db
+.coverage
+app/static/data/*
+app/static/docs/*
+app/static/docs-cp/*
+docs/_build
+docs-cp/_build
+logs/
+tmp/
+*.sw?
+__pycache__
+.cache/
+src/
+data/
+install/*_roles.yaml

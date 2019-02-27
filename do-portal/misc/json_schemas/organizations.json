@@ -1,0 +1,99 @@
+{
+  "add_cp_organization": {
+    "type": "object",
+    "properties": {
+      "abbreviation": {
+        "type": "string"
+      },
+      "full_name": {
+        "type": "string"
+      },
+      "abuse_emails": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "contact_emails":{
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "required": ["email"]
+        }
+      },
+      "ip_ranges": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "cidr"
+        }
+      },
+      "parent_org_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "abbreviation",
+      "full_name",
+      "parent_org_id"
+    ]
+  },
+  "update_cp_organization": {
+    "type": "object",
+    "properties": {
+      "abbreviation": {
+        "type": "string"
+      },
+      "full_name": {
+        "type": "string"
+      },
+      "abuse_emails": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "mail_times": {
+        "type": "integer"
+      },
+      "contact_emails":{
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "required": ["email"]
+        }
+      },
+      "ip_ranges": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "cidr"
+        }
+      }
+    },
+    "required": [
+      "abbreviation",
+      "full_name"
+    ]
+  },
+  "check": {
+    "type": "array",
+    "items": {
+      "type": "string"
+    }
+  }
+}
